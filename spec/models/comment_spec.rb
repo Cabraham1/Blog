@@ -20,4 +20,12 @@ RSpec.describe Comment, type: :model do
       Comment.create(user_id: user.id, post_id: post.id)
     end.to change { post.reload.comments_counter }.by(1)
   end
+
+  it 'should increment the comments counter of the associated post when the comment is saved' do
+    post.comments_counter = 0
+    comment = Comment.new(user_id: user.id, post_id: post.id)
+    comment.save
+
+    expect(post.reload.comments_counter).to eq(1)
+  end
 end
