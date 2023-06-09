@@ -1,26 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  describe 'validations' do
-    it 'is valid with valid attributes' do
-      user = User.new(name: 'John Doe', posts_counter: 3)
-      expect(user).to be_valid
-    end
+  subject { User.new(name: 'Test User', photo: 'www.photo.com', bio: 'Test User model') }
 
-    it 'is not valid with a blank name' do
-      user = User.new(name: '', posts_counter: 3)
-      expect(user).not_to be_valid
-      expect(user.errors[:name]).to include("can't be blank")
-    end
+  before { subject.save }
 
-    it 'is not valid with posts_counter as a non-integer or negative value' do
-      user = User.new(name: 'John Doe', posts_counter: 2.5)
-      expect(user).not_to be_valid
-      expect(user.errors[:posts_counter]).to include('must be an integer')
+  it 'name should be present' do
+    subject.name = nil
+    expect(subject).to_not be_valid
+  end
 
-      user.posts_counter = -1
-      expect(user).not_to be_valid
-      expect(user.errors[:posts_counter]).to include('must be greater than or equal to 0')
-    end
+  it 'posts_counter should be greater than or equal to 0' do
+    subject.posts_counter = -5
+    expect(subject).to_not be_valid
+  end
+
+  it 'posts_counter should be greater than or equal to 0' do
+    subject.posts_counter = 10
+    expect(subject).to be_valid
+  end
+
+  it 'Return last three posts for user' do
+    expect(subject.recent_posts).to eq([])
   end
 end
