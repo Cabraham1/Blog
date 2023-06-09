@@ -15,9 +15,17 @@ RSpec.describe Like, type: :model do
     expect(Like.reflect_on_association(:post).macro).to eq(:belongs_to)
   end
 
-  it 'should increment the likes counter of the associated post' do
+  it 'should increment the likes counter of the associated post when the like is created' do
     expect do
       Like.create(user_id: user.id, post_id: post.id)
     end.to change { post.reload.likes_counter }.by(1)
+  end
+
+  it 'should increment the likes counter of the associated post when the like is updated' do
+    post.likes_counter = 0
+    like = Like.create(user_id: user.id, post_id: post.id)
+    like.update(user_id: user.id, post_id: post.id)
+
+    expect(post.reload.likes_counter).to eq(1)
   end
 end
