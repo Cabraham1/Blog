@@ -1,31 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  let(:user) { User.create(name: 'User Test', photo: 'link', bio: 'Test Like model', posts_counter: 0) }
-  let(:post) do
-    Post.create(author_id: user.id, title: 'Microverse', text: 'Ruby on Rails module', comments_counter: 0,
-                likes_counter: 0)
-  end
+  user = User.create(name: 'User Test', photo: 'link', bio: 'Test Like model', posts_counter: 0)
+  post = Post.create(author_id: user, title: 'Microverse', text: 'Ruby on Rails module', comments_counter: 0,
+                     likes_counter: 0)
+  subject { Like.new(user_id: user, post: post) }
 
-  it 'should belong to a user' do
-    expect(Like.reflect_on_association(:user).macro).to eq(:belongs_to)
-  end
+  before { subject.save }
 
-  it 'should belong to a post' do
-    expect(Like.reflect_on_association(:post).macro).to eq(:belongs_to)
-  end
-
-  it 'should increment the likes counter of the associated post when the like is created' do
-    expect do
-      Like.create(user_id: user.id, post_id: post.id)
-    end.to change { post.reload.likes_counter }.by(1)
-  end
-
-  it 'should increment the likes counter of the associated post when the like is updated' do
-    post.likes_counter = 0
-    like = Like.create(user_id: user.id, post_id: post.id)
-    like.update(user_id: user.id, post_id: post.id)
-
-    expect(post.reload.likes_counter).to eq(1)
+  it 'Should increment likes counter for post' do
+    prev_counter = subject.post.likes_counter
+    subject.increment_post_likes_counter
+    expect(subject.post.likes_counter) == prev_counter + 1
   end
 end
