@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Movie, type: :model do
-  subject { Movie.new(title:"Harry Potter and the Sorcerer's Stone", director: "Chris Columbus", rate: 10)}
+  subject { Movie.new(title: "Harry Potter and the Sorcerer's Stone", director: 'Chris Columbus', rate: 10) }
 
-  before {subject.save}
+  before { subject.save }
 
   it 'title should be present' do
     subject.title = nil
@@ -44,6 +44,4 @@ RSpec.describe Movie, type: :model do
     subject.rate = 11
     expect(subject).to_not be_valid
   end
-
 end
-
