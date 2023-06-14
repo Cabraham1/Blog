@@ -1,1 +1,16 @@
-<h1>This is for the show</h1>
+<h2>Details of a selected user</h2>
+
+<span><%= @user.photo %></span>
+<span><%= @user.name %></span>
+
+<p><%= @user.bio %></p>
+
+<% @user.return_recent_posts.each_with_index do |post, index|%>
+<p>Post #<%= index+1 %></p>
+<p>
+  <%= post.text%>
+</p>
+ <span>Likes : <%= post.likes_counter %></span>
+  <span>Comments : <%= post.comments_counter %></span>
+<% end %>
+<%= link_to "See all posts", user_posts_path(@user.id)%>
