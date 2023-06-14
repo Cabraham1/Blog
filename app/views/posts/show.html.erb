@@ -1,1 +1,15 @@
-<h1> Show me</h1>
+<h1>Post description</h1>
+
+<p>
+<%= @post.title%>
+</p>
+
+<p>
+<%= @post.text%>
+</p>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+  <li><%= comment.author.name %> <b>:</b> <%= comment.text %></li>
+ <% end %> 
+  </ul>
