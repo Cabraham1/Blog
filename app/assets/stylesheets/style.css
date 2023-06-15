@@ -8,7 +8,7 @@ body {
   background-color: red;
 }
 
-td{ 
+td { 
   width: 155px;
   padding: 10px;
 }
@@ -41,7 +41,6 @@ img {
 
 .bio-details {
   margin: 20px;
-
 }
 
 .post-like-comment {
