@@ -10,6 +10,7 @@
 
 <ul>
   <% @post.comments.each do |comment| %>
-  <li><%= comment.author.name %> <b>:</b> <%= comment.text %></li>
- <% end %> 
-  </ul>
+    <li><%= comment.user.name %> <b>:</b> <%= comment.text %></li>
+  <% end %>
+</ul>
+
