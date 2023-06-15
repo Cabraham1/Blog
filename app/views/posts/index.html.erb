@@ -1,6 +1,6 @@
 <p> This is the list of posts</p>
 
-<span><%= @user.photo %></span>
+<span><img src="<%= @user.photo %>" alt="User Photo"></span>
 <span><%= @user.name %></span>
 
 <% @posts.each_with_index do |post, index| %>

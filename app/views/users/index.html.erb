@@ -8,7 +8,8 @@
   </tr>
   <% @users.each do |user| %>
     <tr>
-      <td><%= user.photo %></td>
+    <img src= "https://unsplash.com/photos/man-person-standing-between-tall-trees-F_-0BxGuVvo">
+      <td><img src="<%= user.photo %>" alt="User Photo"></td>
       <td><%= user.name %></td>
       <td><%= user.posts_counter %></td>
       <td><%= link_to 'User', user_path(user.id) %></td>
