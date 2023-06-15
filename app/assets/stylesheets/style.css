@@ -21,5 +21,34 @@ img {
 
 #detail-img {
   border: 1px solid green;
-  width: 5%;
+  width: 10%;
+}
+
+.details-header {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.detail-item {
+  margin-left: 25px;
+}
+
+.details-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.bio-details {
+  margin: 20px;
+
+}
+
+.post-like-comment {
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 10px;
 }
