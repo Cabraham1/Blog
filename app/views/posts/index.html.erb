@@ -1,3 +1,4 @@
+  <%= stylesheet_link_tag "style" %>
 <p> This is the list of posts</p>
 
 <span><img src="<%= @user.photo %>" alt="User Photo"></span>
@@ -21,5 +22,4 @@
 
 <a href="/users/<%= @user.id %>/posts/<%= post.id %>"> See more</a>
 <% end %>
-
-
+</html>

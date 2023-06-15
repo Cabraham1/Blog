@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: red;
+}
+
+
+td{ 
+width: 150px;
+padding: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#detail-img {
+  border: 1px solid green;
+  width: 5%;
+}
