@@ -1,17 +1,22 @@
-
-<div class='Post-dec'> 
-<h2><%= @post.title%> by <%= @post.user.name %></h2>
-<p class="post-head-counter">
-      Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
-  </p>
+<h1> show post for a given user</h1>
+<div class="posts">
+  <div class='Post-dec'>
+    <p> <%= @post.text%> by <%= @user.name%> </p>
+    <p > Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %> </p>
   </div>
-<p>
-<%= @post.text%>
-</p>
 
 <ul>
-  <% @post.comments.each do |comment| %>
-    <li><%= comment.user.name %> <b>:</b> <%= comment.text %></li>
-  <% end %>
-</ul>
+  <% @post.return_recent_comments.each do |comment| %>
+  <li> <%= comment.text %></li>
+ <% end %> 
+  </ul>
 
+  <div > 
+    <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |f| %>
+  <%= f.submit "Like" %>
+  <% end %>
+  </div>
+</div>
+
+<%= link_to 'Add comment', new_user_post_comment_path(@user, @post) %>
+<%= link_to 'Go back', user_posts_path(@user) %>

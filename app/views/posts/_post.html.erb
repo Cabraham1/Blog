@@ -1,0 +1,16 @@
+<li>
+ <h3> <% post.title%> </h3>
+ <p><%= post.text %></p>
+
+ <strong>
+  <p>
+   Comments: <%= post.comments_counter %>
+   Likes: <%= post.likes_counter %> </p>
+ </strong>
+<ul>
+  <% post.return_recent_comments.each do |comment| %>
+  <li> <%= comment.text %></li>
+ <% end %> 
+  </ul>
+<a href="/users/<%= @user.id %>/posts/<%= post.id %>"> See more</a>
+</li>
