@@ -1,20 +1,18 @@
 class CommentsController < ApplicationController
-   before_action :set_user, only: [:create]
+  before_action :set_user, only: [:create]
   before_action :set_post, only: [:create]
+
+def new
+    @comment = Comment.new
+  end
 
   def create
     @comment = Comment.new(comment_params)
-    @comment.post = @post
-    @comment.author = current_user
     if @comment.save
       redirect_to user_post_path(@user, @post)
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def new
-    @comment = Comment.new
   end
 
   private
@@ -28,6 +26,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:text)
+  params.require(:comment).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
   end
 end

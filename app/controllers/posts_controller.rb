@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show]
-  before_action :set_user, only: [:index, :create, :show]
-
   def index
+    @user = User.find(params[:user_id])
     @posts = @user.posts
   end
 
@@ -11,6 +9,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @post = current_user.posts.new(post_params)
     @post.comments_counter = 0
     @post.likes_counter = 0
@@ -24,6 +23,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   private
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:author_id])
   end
 
   def post_params
