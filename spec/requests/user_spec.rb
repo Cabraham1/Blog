@@ -8,7 +8,7 @@ RSpec.describe 'Users controller', type: :request do
 
     expect(response).to render_template(:index)
 
-    expect(response.body).to include('This is the home page')
+    expect(response.body).to include('List of all users')
   end
 
   it 'renders a page for specific user' do
