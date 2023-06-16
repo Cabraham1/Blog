@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     begin
       @like.save!
       redirect_to user_post_path(params[:user_id], params[:post_id])
-    rescue ActiveRecord::RecordInvalid => e
+    rescue ActiveRecord::RecordInvalid
       render :error, status: :unprocessable_entity
     end
   end
