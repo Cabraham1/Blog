@@ -7,8 +7,8 @@ RSpec.describe Comment, type: :model do
                 likes_counter: 0)
   end
 
-  it 'should belong to a user' do
-    expect(Comment.reflect_on_association(:user).macro).to eq(:belongs_to)
+  it 'should belong to a author' do
+    expect(Comment.reflect_on_association(:author).macro).to eq(:belongs_to)
   end
 
   it 'should belong to a post' do
