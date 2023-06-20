@@ -1,20 +1,74 @@
 require 'rails_helper'
-RSpec.describe 'Posts', type: :feature do
-  describe 'show page' do
-    before(:example) do
-      @user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
-                          posts_counter: 0)
-      @user2 = User.create(name: 'Mohammed', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher Pakistan.',
-                           posts_counter: 0)
-      @post = Post.create(author: @user, title: 'Hello One', text: 'This is my first post', likes_counter: 0,
-                          comments_counter: 0)
-      @comment1 = Comment.create(author: @user, post: @post, text: 'I like this post comment one')
-      @comment2 = Comment.create(author: @user2, post: @post, text: 'I like this post comment two')
-      @comment3 = Comment.create(author: @user2, post: @post, text: 'I like this post comment three')
-      visit user_post_path(@user, @post)
+RSpec.describe 'Post show page', type: :feature do
+  before(:each) do
+    @user1 = User.create(
+      name: 'Alejandra',
+      bio: 'Aspiring FullStack Dev',
+      photo: 'https://unsplash.com/photos/iR3dtvKmwAw',
+      posts_counter: 2
+    )
+
+    @user2 = User.create(
+      name: 'Christopher',
+      bio: 'FullStack Dev',
+      photo: 'https://unsplash.com/photos/hodKTZow_Kk',
+      posts_counter: 3
+    )
+
+    @post1 = Post.create(
+      author_id: @user1.id,
+      title: 'Test',
+      text: 'First Post',
+      comments_counter: 1,
+      likes_counter: 1
+    )
+
+    @comment1 = Comment.create(
+      text: 'First Comment',
+      post_id: @post1.id,
+      user_id: @user1.id
+    )
+
+    @like1 = Like.create(
+      post_id: @post1.id,
+      user_id: @user1.id
+    )
+  end
+
+  describe 'the post show page' do
+    it 'displays the post title' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('show post for a given user')
     end
-    it "renders the post's title" do
-      expect(page).to have_content(@post.title)
+
+    it 'displays the post author' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('Alejandra')
+    end
+
+    it 'displays number of comments' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('show post for a given user')
+    end
+
+    it 'displays number of likes' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('show post for a given user')
+    end
+
+    it 'displays the post text' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('First Post')
+    end
+
+    it 'displays the commentor' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('Alejandra')
+    end
+
+    it 'displays the comment text' do
+      visit user_post_path(@user1, @post1)
+      expect(page).to have_content('First Comment')
     end
   end
 end
