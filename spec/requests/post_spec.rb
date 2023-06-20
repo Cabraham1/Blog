@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Users controller', type: :request do
   before(:all) do
-    @user = User.create(name: 'Tom', photo: 'https://avatars.githubusercontent.com/u/68823331?v=4', bio: 'Teacher from Mexico.',
-                        posts_counter: 0)
+    @user = User.create(name: 'Tom', photo: 'https://avatars.githubusercontent.com/u/68823331?v=4',
+                        bio: 'Teacher from Mexico.', posts_counter: 0)
   end
 
   it 'renders posts of a user' do

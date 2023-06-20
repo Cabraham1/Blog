@@ -2,7 +2,8 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :feature do
   describe 'index page' do
     before(:example) do
-      @user = User.create(name: 'Tom', photo: 'https://avatars.githubusercontent.com/u/68823331?v=4', bio: 'Teacher from Mexico.',
+      @user = User.create(name: 'Tom', photo: 'https://avatars.githubusercontent.com/u/68823331?v=4',
+                          bio: 'Teacher from Mexico.',
                           posts_counter: 0)
       @post1 = Post.create(author: @user, title: 'Hello', text: 'This is my first post', likes_counter: 0,
                            comments_counter: 0, id: 1196)
