@@ -48,12 +48,12 @@ RSpec.describe 'Post show page', type: :feature do
 
     it 'displays number of comments' do
       visit user_post_path(@user1, @post1)
-      expect(page).to have_content('show post for a given user')
+      expect(page).to have_content('Comments: 2')
     end
 
     it 'displays number of likes' do
       visit user_post_path(@user1, @post1)
-      expect(page).to have_content('show post for a given user')
+      expect(page).to have_content('Likes')
     end
 
     it 'displays the post text' do
