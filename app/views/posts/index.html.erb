@@ -1,12 +1,20 @@
 <p> This is the list of posts</p>
 
- <%= render'users/user', user: @user %>
- 
-<% @posts.each_with_index do |post, index| %>
-<p>Post #<%= index+1 %></p>
-<section >
-  <ul><%= render 'posts/post', post: post %></ul>
+<%= render 'users/user', user: @user %>
 
-</section>
+<% @posts.each_with_index do |post, index| %>
+  <p>Post #<%= index+1 %></p>
+  <h2>
+
+  <a href="/users/<%= @user.id %>/posts/<%= post.id %>", class='detail-item'> <%= post.title %></a>
+</h2>
+  <section>
+    <ul>
+      <%= render 'posts/post', post: post %>
+    </ul>
+  </section>
+
 <% end %>
+
 <%= link_to 'Add New Post', new_user_post_url(@user) %>
+<%= link_to 'Next', users_path %>
