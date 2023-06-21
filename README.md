@@ -30,8 +30,7 @@
 
 # 📖 Blog <a name="about-project"></a>
 
-**Blog** is a my first rails Application
-
+**Blog**  will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts..
 # 🛠 Built With <a name="built-with"></a>
 
 ## Tech Stack <a name="tech-stack"></a>
@@ -141,11 +140,12 @@ Example command:
 - Twitter: [@_cabraham](https://twitter.com/_cabraham)
 - LinkedIn: [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
 
-  👤 **Mohammad Rafi Amin**
 
-- GitHub: [@githubhandle](https://github.com/mrkamin)
-- Twitter: [@twitterhandle](https://twitter.com/Mohamma63974237)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
+👤 **Alejandra Keber Maggi**
+- GitHub: [@AlejandraKeber](https://github.com/AlejandraKeber)
+- Twitter: [@KeberAlejandra](https://twitter.com/KeberAlejandra)
+- LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

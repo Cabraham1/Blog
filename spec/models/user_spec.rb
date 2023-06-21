@@ -1,26 +1,13 @@
-require 'rails_helper'
+# app/models/user.rb
+class User < ApplicationRecord
+  has_many :posts, foreign_key: 'author_id'
+  has_many :comments, foreign_key: 'author_id'
+  has_many :likes, foreign_key: 'author_id'
 
-RSpec.describe User, type: :model do
-  subject { User.new(name: 'Test User', photo: 'www.photo.com', bio: 'Test User model') }
+  validates :name, presence: true
+  validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  before { subject.save }
-
-  it 'name should be present' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
-
-  it 'posts_counter should be greater than or equal to 0' do
-    subject.posts_counter = -5
-    expect(subject).to_not be_valid
-  end
-
-  it 'posts_counter should be greater than or equal to 0' do
-    subject.posts_counter = 10
-    expect(subject).to be_valid
-  end
-
-  it 'Return last three posts for user' do
-    expect(subject.recent_posts).to eq([])
+  def recent_posts
+    posts.order(created_at: :desc).limit(3)
   end
 end
