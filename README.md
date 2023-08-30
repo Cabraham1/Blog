@@ -147,6 +147,12 @@ Example command:
 - LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
 
 
+🕵🏽‍♀️ **Marco Baquero**
+
+- GitHub: [@Marco](https://github.com/mrcbq)
+- Twitter: [@Marco](https://twitter.com/mrcbq)
+- LinkedIn: [Marco Baquero](https://linkedin.com/in/mrcbq)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
