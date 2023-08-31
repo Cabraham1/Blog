@@ -140,11 +140,11 @@ Example command:
 - Twitter: [@_cabraham](https://twitter.com/_cabraham)
 - LinkedIn: [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
 
+🕵🏽‍♀️ **Marco Baquero**
 
-👤 **Alejandra Keber Maggi**
-- GitHub: [@AlejandraKeber](https://github.com/AlejandraKeber)
-- Twitter: [@KeberAlejandra](https://twitter.com/KeberAlejandra)
-- LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
+- GitHub: [@mrcbq](https://github.com/mrcbq)
+- Twitter: [@_mrcbq](https://twitter.com/_mrcbq)
+- LinkedIn: [Marco Baquero](https://linkedin.com/in/mrcbq)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
