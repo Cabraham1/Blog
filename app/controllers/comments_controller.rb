@@ -1,6 +1,4 @@
 class CommentsController < ApplicationController
-  before_action :set_user, only: [:create]
-  before_action :set_post, only: [:create]
 
   def new
     @comment = Comment.new
@@ -15,17 +13,5 @@ class CommentsController < ApplicationController
     end
   end
 
-  private
-
-  def set_user
-    @user = User.find(params[:user_id])
-  end
-
-  def set_post
-    @post = Post.find(params[:post_id])
-  end
-
-  def comment_params
-    params.require(:comment).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
-  end
+  
 end
