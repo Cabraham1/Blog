@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :set_user, only: [:create]
+  before_action :set_post, only: [:create]
 
   def new
     @comment = Comment.new
