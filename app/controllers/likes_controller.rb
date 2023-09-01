@@ -9,6 +9,7 @@ class LikesController < ApplicationController
       format.json { render json: @likes, status: 200 }
     end
   end
+
   def create
     @like = current_user.likes.new
     @like.post_id = params[:post_id]

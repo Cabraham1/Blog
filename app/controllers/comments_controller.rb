@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
       format.json { render json: @comments, status: 200 }
     end
   end
+
   def create
     @comment = current_user.comments.new(comment_params)
     @comment.post_id = params[:post_id]
@@ -25,9 +26,11 @@ class CommentsController < ApplicationController
       end
     end
   end
+
   def comment_params
     params.require(:comment).permit(:text)
   end
+
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy

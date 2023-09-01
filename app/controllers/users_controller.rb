@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       format.json { render json: @users, status: 200 }
     end
   end
+
   def show
     if params[:id] == 'sign_out'
       sign_out current_user

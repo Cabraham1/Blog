@@ -9,6 +9,7 @@ class PostsController < ApplicationController
       format.json { render json: @posts, status: 200 }
     end
   end
+
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
@@ -17,9 +18,11 @@ class PostsController < ApplicationController
       format.json { render json: @post, status: 200 }
     end
   end
+
   def new
     @post = current_user.posts.new
   end
+
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
@@ -30,12 +33,14 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
   def destroy
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
     @post.destroy
     redirect_to user_posts_path(@user)
   end
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
