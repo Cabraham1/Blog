@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
   end
+
   def show
     if params[:id] == 'sign_out'
       sign_out current_user
