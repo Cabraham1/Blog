@@ -22,7 +22,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 blogAppRails <a name="about-project"></a>
+# 📖 blog <a name="about-project"></a>
 
 > The blogAppRails will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts..
 
@@ -91,23 +91,12 @@ rails s
 
 <!-- > Mention all of the collaborators of this project. -->
 
-👤 **Mohammad Rafi Amin**
-
-- GitHub: [@githubhandle](https://github.com/mrkamin)
-- Twitter: [@twitterhandle](https://twitter.com/Mohamma63974237)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
-
 
 🕵🏽‍♀️ **Abraham Christopher**
 
 - GitHub: [@cabraham1](https://github.com/cabraham1)
 - Twitter: [@_cabraham](https://twitter.com/_cabraham)
 - LinkedIn [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
-
-👤 **Alejandra Keber Maggi**
-- GitHub: [@AlejandraKeber](https://github.com/AlejandraKeber)
-- Twitter: [@KeberAlejandra](https://twitter.com/KeberAlejandra)
-- LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
 
 <!-- FUTURE FEATURES -->
 
@@ -127,7 +116,7 @@ rails s
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mrkamin/blogAppRails/issues).
+Feel free to check the [issues page](https://github.com/cabraham1/blog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,6 +138,6 @@ Thanks [@microverse](https://www.microverse.org/)
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/mrkamin/blogAppRails/blob/Dev/LICENSE) licensed.
+This project is [MIT](https://github.com/cabraham1/blogAppRails/blob/Dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
