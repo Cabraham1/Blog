@@ -1,11 +1,11 @@
-class PostsController < ApplicationController
+class Api::V1::PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
     @user = User.find(params[:user_id])
     @posts = Post.all.includes(:comments)
+
     respond_to do |format|
-      format.html
       format.json { render json: @posts, status: 200 }
     end
   end
@@ -13,8 +13,8 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+
     respond_to do |format|
-      format.html
       format.json { render json: @post, status: 200 }
     end
   end
@@ -44,5 +44,6 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
+
   private :post_params
 end
