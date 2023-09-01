@@ -4,12 +4,12 @@
     <% @users.each do |user| %>
         <article class="home_cards">
             <figure>
-                <%# <img src=<%= user.photo %> alt='<%= user.name %>'> %>
+                <img src=<%= user.photo %> alt='<%= user.name %>'>
             </figure>
             <div class="home_cards_details">
             <h2></h2>
-                <%# <h3>Username: <%= link_to user.name, user_path(user.id), class:"td_none" %></h3> %>
-                <%# <span>Number of posts: <%= user.posts_counter %></span> %>
+                <h3>Username: <%= link_to user.name, user_path(user.id), class:"td_none" %></h3>
+                <span>Number of posts: <%= user.posts_counter %></span>
             </div>
         </article>
     <% end %>
