@@ -1,17 +1,26 @@
-class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :comments, dependent: :destroy, foreign_key: 'post_id'
-  has_many :likes, dependent: :destroy, foreign_key: 'post_id'
+# class Post < ApplicationRecord
+#   belongs_to :author, class_name: 'User'
+#   has_many :likes, foreign_key: :post_id, dependent: :delete_all
+#   has_many :comments, foreign_key: :post_id, dependent: :delete_all
 
-  validates :title, presence: true, length: { maximum: 250 }
-  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+#   after_save :update_post_counter
+#   after_destroy :decrement_post_counter
 
-  def return_recent_comments
-    comments.order(created_at: :desc).limit(5)
-  end
+#   validates :title, presence: true
+#   validates :comments_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
+#   validates :likes_counter, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
 
-  def user
-    author
-  end
-end
+#   def latest_five_comments
+#     comments.order(created_at: :desc).limit(5)
+#   end
+
+#   def update_post_counter
+#     author.update(posts_counter: author.posts.all.length)
+#   end
+
+#   def decrement_post_counter
+#     author.decrement!(:posts_counter)
+#   end
+
+#   private :update_post_counter, :decrement_post_counter
+# end

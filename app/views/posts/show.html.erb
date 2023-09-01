@@ -1,25 +1,46 @@
-<h1> show post for a given user</h1>
-<div class="posts">
-  <div class='Post-dec'>
-    <div>
-    <h2> <%= @post.title%> </h2>
-    <p> <%= @post.text%> by <%= @user.name%> </p>
-    </div>
-    <p > Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %> </p>
-  </div>
+<main>
+        <section class="post_details_section1">
+            <article class="post_details_section1_card">
+                <header>
+                    <h3><%= @post.title %> by <%= @post.author.name %></h3>
+                    <ul class="post_interaction list_style_none">
+                        <li>Comments: <%= @post.comments_counter || 0 %></li>
+                        <li>Likes: <%= @post.likes_counter || 0 %></li>
+                    </ul>
+                </header>
+                
+                <%# <div class="post_details_section1_card_text"> %>
+                    <p><%= @post.text %></p>
+                </div>
+            </article> 
 
-<ul>
-  <% @post.return_recent_comments.each do |comment| %>
-  <li> <%= comment.text %></li>
- <% end %> 
-  </ul>
+            <%# <ul class="post_details_section1_user_comment_box list_style_none"> %>
+             <%# <% @post.latest_five_comments.includes(:author).each do |comment| %> %>
+                <%# <li> <%= comment.author.name %>: <%= comment.text %></li> %>
+                <br>
+                <% if can? :destroy, comment %>
+                <button class="login_btn">
+                <%= link_to 'Delete Comment', user_post_comment_path(@user, comment.post, comment.id) , data: { turbo_method: :delete,
+                    turbo_confirm: "Are you sure you want to delete Comment?"
+                  } %>
+                </button>
+                <% end %>
+             <% end %>
+            </ul>
 
-  <div > 
-    <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |f| %>
-  <%= f.submit "Like" %>
-  <% end %>
-  </div>
-</div>
+            <br><br>
+            <div><%= render "comments/form" %> </div>
+            <div><%= render "shared_features/likeforms" %></div>
+ 
 
-<%= link_to 'Add comment', new_user_post_comment_path(@user, @post) %>
-<%= link_to 'Go back', user_posts_path(@user) %>
+            <div>
+                <% if can? :destroy, @post%>
+                    <button class='login_btn'>
+                    <%= link_to 'Delete Post', user_post_path(@user, @post), data: { turbo_method: :delete,
+                    turbo_confirm: "Are you sure you want to delete Post?"} %>
+                    </button>
+                <% end %>
+            </div>
+
+        </section>
+</main>

@@ -14,23 +14,26 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'acbbf6228589f8b9a182ae3fde165c0c75d7c641919adab3e089468ddb3b4a84d71166da480288a88cee361d965a07b40be3dee079e4ee6131cbc826a1654ef7'
+  # config.secret_key = 'd239a89089e51e43126c1cf0f8562dc67673fb25dd5eed6d0f60789327d94806f3ea5eb8d494f4982a8147952894e69954e22ae6e40768e5659f56b890a39734'
+
+  # Added from the blog material
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
-  
+
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'christopherabraham8@gmail.com'
+  config.mailer_sender = 'emekaekeoha@yahoo.com'
 
   # Configure the class responsible to send e-mails.
-  config.mailer = 'Devise::Mailer'
+  # config.mailer = 'Devise::Mailer'
 
   # Configure the parent class responsible to send e-mails.
-  config.parent_mailer = 'ActionMailer::Base'
+  # config.parent_mailer = 'ActionMailer::Base'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
@@ -126,7 +129,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'c56a261a5734435656f77ae4ebe2c3737bfaaf3dc892401aff8a456fd79cb3180a208677b342fbee1ce15fc705077b12ccbdf7c90a97eb9fc8f9fe5aac85de16'
+  # config.pepper = '7cb378461b26553f0432c1efbb2c30da0907a725082a2d23b03fc04eb6e69597c6177e956b1bda9bc96029579d2a151d815953e60c69aa160eb79b701a604605'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -143,7 +146,7 @@ Devise.setup do |config|
   # without confirming their account.
   # Default is 0.days, meaning the user cannot access the website without
   # confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+  config.allow_unconfirmed_access_for = 2.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
@@ -244,7 +247,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).

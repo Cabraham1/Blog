@@ -1,26 +1,19 @@
-<section>
-  <h1>Create new post</h1> 
+<section class="container">
+<p class="post-title"> Add New Post :</p>
+<%= form_with model: @post, url: user_posts_path do |f| %>
+     <div>
+     <%= f.label :title %> <br>
+     <%= f.text_field :title %>
+     </div>
 
-<% if @post.errors.any? %>
-<ul>
- <% @post.errors.full_messages.each do |msg|%>
- <li>
-  <%= msg %>
-  </li>
- <% end %>
- </ul>
+     <div>
+     <%= f.label :text %> <br>
+     <%# <%= f.text_field :text, placeholder: "Enter post text", row: 40, required: true %> %>
+     </div>
+     <br>
+     <div>
+     <%= f.submit "Submit Post" %>
+     </div>
 <% end %>
-  <%= form_with model: @post, url: user_posts_path, method: :post, class: 'form' do |f|%>
-    <div>
-      <%= f.label :title, 'Enter post title' %><br>
-      <%= f.text_field :title %>
-    </div>
-    <div>
-      <%= f.label :text, 'Enter post content' %><br>
-      <%= f.text_area :text %>
-    </div>
-    <div>
-      <%= f.submit %>
-    </div>
-  <% end %>
+
 </section>

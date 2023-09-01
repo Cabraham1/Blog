@@ -1,12 +1,17 @@
 class Comment < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'user_id'
-  belongs_to :post, foreign_key: 'post_id'
+  belongs_to :author, class_name: 'User'
+  belongs_to :post
 
-  after_create :increment_comments_counter
+  after_save :update_comment_counter
+  after_destroy :decrement_comment_counter
 
-  private
-
-  def increment_comments_counter
-    post.increment!(:comments_counter)
+  def update_comment_counter
+    post.update(comments_counter: post.comments.all.length)
   end
+
+  def decrement_comment_counter
+    post.decrement!(:comments_counter)
+  end
+
+  private :update_comment_counter, :decrement_comment_counter
 end

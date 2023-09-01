@@ -1,194 +1,154 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <h1><b>📚 Blog 🖥</b></h1>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog ](#-fantastic-happiness-)
-- [🛠 Built With ](#-built-with-)
-  - [Tech Stack ](#tech-stack-)
-- [🎲 Key Features ](#-key-features-)
-- [💻 Getting Started ](#-getting-started-)
-  - [Prerequisites](#prerequisites)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Install](#install)
+  - [Prerequisites](#prerequisites)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-- [👥 Authors ](#-authors-)
-- [🔭 Future Features ](#-future-features-)
-- [🤝 Contributing ](#-contributing-)
-- [⭐️ Show your support ](#️-show-your-support-)
-- [🙏 Acknowledgments ](#-acknowledgments-)
-- [📝 License ](#-license-)
+ - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog <a name="about-project"></a>
+# 📖 blogAppRails <a name="about-project"></a>
 
-**Blog**  will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts..
-# 🛠 Built With <a name="built-with"></a>
+> The blogAppRails will be a classic example of a blog website. I will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts..
 
-## Tech Stack <a name="tech-stack"></a>
+## Built With
 
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
+![](https://img.shields.io/badge/-Ruby-red)
+![](https://img.shields.io/badge/-VSCode-blue)
+![](https://img.shields.io/badge/-Rspec-red)
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+- Visual Studio Code
+- Ruby
+- Rspec
+- Rails
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- Features -->
+### Key Features <a name="key-features"></a>
 
-# 🎲 Key Features <a name="key-features"></a>
+<!-- > Describe between 1-3 key features of the application. -->
 
-- **Create Ruby on Rails project**
-- **Project 1: Creating a data model.**
-- **Project 2: Validations and Model specs.**
-- **Project 3: Processing data in models.**
-- **Project 4: Setup and controllers.**
-- **Project 5: Controllers specs.**
-- **Project 6: Views.**
-- **Project 7: Forms.**
-- **Project 8: Integration specs for Views and fixing n+1 problems.**
-- **Project 9: Add Devise.**
-- **Project 10: Add authorization rules.**
-- **Project 11: Add API endpoints.**
+- Present the user with a list of options to choose and perform.
+- Project 1: Creating a data model.
+- Project 2: Validations and Model specs.
+- Project 3: Processing data in models.
+- Project 4: Setup and controllers.
+- Project 5: Controllers specs.
+- Project 6: Views.
+- Project 7: Forms.
+- Project 8: Integration specs for Views and fixing n+1 problems.
+- Project 9: Add Devise.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
-# 💻 Getting Started <a name="getting-started"></a>
+## 💻 Getting Started <a name="getting-started"></a>
 
+<!-- > Describe how a new developer could make use of your project. -->
 
 To get a local copy up and running, follow these steps.
 
-## Prerequisites
+### Prerequisites
 
 In order to run this project you need:
 
-Example command:
-
-```sh
- gem install rails
-```
-
-## Setup
+### Setup
 
 Clone this repository to your desired folder:
 
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:Cabraham1/Blog.git
+```
+ git@github.com:mrkamin/Blog-app.git
+   cd Blograils
 ```
 
-## Install
-
-Install this project with:
-
-Example command:
-
-```sh
-  cd Blog
-  gem install
-```
-
-## Usage
+### Usage
 
 To run the project, execute the following command:
 
-Example command:
-
-```sh
-  rails server
 ```
-
-## Run tests
-
-To run tests, run the following command:
-
-Example command:
-
-```sh
-  rspec
+rails s
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
-# 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
+
+<!-- > Mention all of the collaborators of this project. -->
+
+👤 **Mohammad Rafi Amin**
+
+- GitHub: [@githubhandle](https://github.com/mrkamin)
+- Twitter: [@twitterhandle](https://twitter.com/Mohamma63974237)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammad-rafi-amin-63b4319b/)
+
 
 🕵🏽‍♀️ **Abraham Christopher**
 
 - GitHub: [@cabraham1](https://github.com/cabraham1)
 - Twitter: [@_cabraham](https://twitter.com/_cabraham)
-- LinkedIn: [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
+- LinkedIn [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
 
-🕵🏽‍♀️ **Marco Baquero**
-
-- GitHub: [@mrcbq](https://github.com/mrcbq)
-- Twitter: [@_mrcbq](https://twitter.com/_mrcbq)
-- LinkedIn: [Marco Baquero](https://linkedin.com/in/mrcbq)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+👤 **Alejandra Keber Maggi**
+- GitHub: [@AlejandraKeber](https://github.com/AlejandraKeber)
+- Twitter: [@KeberAlejandra](https://twitter.com/KeberAlejandra)
+- LinkedIn: [alejandra-keber](www.linkedin.com/in/alejandra-keber)
 
 <!-- FUTURE FEATURES -->
 
-# 🔭 Future Features <a name="future-features"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
-- **Exercise: API documentation.**
+<!-- > Describe 1 - 3 features you will add to the project. -->
+
+- Project 10: Add authorization rules.
+- Project 11: Add API endpoints.
+- Exercise: API documentation.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
-# 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Cabraham1/Blog/issues).
+Feel free to check the [issues page](https://github.com/mrkamin/blogAppRails/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
-# ⭐️ Show your support <a name="support"></a>
+## ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly show some love, give it a 🌟 **STAR** 🌟
+If you like this project, Please give it a ⭐️⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
-# 🙏 Acknowledgments <a name="acknowledgements"></a>
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank: 
-- Microverse
-- Code Reviewers
-- Learning Partners
+Thanks [@microverse](https://www.microverse.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
+## 📝 License <a name="license"></a>
 
-# 📝 License <a name="license"></a>
-
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/mrkamin/blogAppRails/blob/Dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
