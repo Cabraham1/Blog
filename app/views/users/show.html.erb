@@ -21,22 +21,22 @@
         </section>
 
         <section class="user_details_post_section">
-            <%# <% @user.latest_three_posts.each do |post| %> %>
-            <%# <%= link_to user_post_path(@user.id, post.id), class:"td_none" do %> %>
+            <% @user.latest_three_posts.each do |post| %>
+            <%= link_to user_post_path(@user.id, post.id), class:"td_none" do %>
             <article>
-                <%# <header> <h3><%= post.title %></h3></header> %>
-                <%# <div><p><%= post.text %></p></div> %>
+                <header> <h3><%= post.title %></h3></header>
+                <div><p><%= post.text %></p></div>
             </article>
             <% end %>
             <% end %>
             
 
-            <%# <div class="see_all_btnbox"> %>
-                <%# <button><%= link_to "See all posts", user_posts_path(@user), class:"td_none" %></button>  %>
+            <div class="see_all_btnbox">
+                <button><%= link_to "See all posts", user_posts_path(@user), class:"td_none" %></button> 
             </div>
             <br>
             <div class="see_all_btnbox">
-                <%# <button><%= link_to "Create new post", new_user_post_path(@user.id), class:"td_none" %></button> %>
+                <button><%= link_to "Create new post", new_user_post_path(@user.id), class:"td_none" %></button>
             </div>
         </section>
     </main>
