@@ -98,6 +98,12 @@ rails s
 - Twitter: [@_cabraham](https://twitter.com/_cabraham)
 - LinkedIn [Abraham Christopher](https://linkedin.com/in/abrahamchrisotpher)
 
+🕵🏽‍♀️ **Marco Baquero**
+
+- GitHub: [@Marco](https://github.com/mrcbq)
+- Twitter: [@Marco](https://twitter.com/mrcbq)
+- LinkedIn [Marco Baquero](https://linkedin.com/in/mrcbq)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
